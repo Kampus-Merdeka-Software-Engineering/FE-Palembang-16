@@ -1,0 +1,361 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.main-container {
+    max-width: 1100px;
+    margin : 0 auto;
+}
+.header-container {
+    width: 100%;
+    height: 80px;
+    background-color: #AEC3AE;
+    position: relative;
+}
+.header-logo img {
+    float:left;
+    width :100px;
+    height: auto;
+    margin: 10px 50px;
+    display: flex;
+}
+.menu ul li {
+    float:right;
+    list-style: none;
+    margin : 25px 15px;
+}
+li a {
+    color: #183D3D;
+    font-weight: bold;
+    text-decoration: none;
+}
+.button-nav a {
+    color: #AEC3AE;
+    background-color: #183D3D;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 8px;
+}
+.button-nav a:hover {
+    color: #183D3D;
+    background-color: #FAF3F0;
+    cursor: pointer;
+}
+
+/* hamburger menu */
+/* .menu-toogle {
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+}
+.menu-toogle span {
+    display: block;
+    width : 28px;
+    height: 3px;
+    background-color:#183D3D;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+.menu-toogle input {
+    display: block;
+    position: absolute;
+    background-color: black;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top:-5px;
+    opacity: 0;
+    z-index: 2;
+} */
+
+.main-contain {
+    margin:0px;
+    padding:0px;
+    display:block;
+    position: relative;
+    clear: both;
+}
+#beranda img {
+    width: 400px;
+    height: 300px;
+    margin: 30px 10px 30px 50px;
+    float: left;
+}
+#beranda .konten1 {
+    width:600px;
+    height:300px;
+    float: right;
+    color: #183D3D;
+    margin:20px;
+}
+.konten1 h3 {
+    margin: 20px 0px -10px 0px;
+}
+.konten1 h2 {
+    font-size: 45px;
+    font-weight: 800px;
+}
+.konten1 p {
+    margin-bottom: 30px;
+}
+p a {
+    text-decoration: none;
+    color :#AEC3AE;
+    background-color: #183D3D;
+    border-radius: 50px;
+    padding: 8px;
+    font-weight: bold;
+}
+p a:hover {
+    color :#183D3D;
+    background-color: #AEC3AE;
+}
+#produkkami h4 {
+    color: #183D3D;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background-color: #AEC3AE;
+    border-radius: 50px;
+}
+#produkkami .kolom {
+    display: inline-block;
+    text-align: center;
+    background-color: #FAF3F0;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0px 30px;
+}
+#produkkami .kolom:hover {
+    background-color: #CBE4DE;
+    cursor: pointer;
+}
+#produkkami img {
+    width: 270px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 15px;
+}
+#produkkami a {
+    text-decoration: none;
+    color: #183D3D;
+}
+#produkkami p {
+    width: 270px;
+    height: auto;
+    color: #183D3D;
+    margin: 15px;
+}
+#materi-rekomendasi h4 {
+    color: #183D3D;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background-color: #AEC3AE;
+    border-radius: 50px;
+}
+#materi-rekomendasi .kolom {
+    display: inline-block;
+    margin:30px;
+    text-align: center;
+}
+#materi-rekomendasi a {
+    text-decoration: none;
+    color: #183D3D;
+}
+#materi-rekomendasi img {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+}
+.konten-rekomendasi ul li {
+    font-weight: bold;
+    margin-top: 5px;
+}
+.konten-rekomendasi p {
+    margin-top: 5px;
+    padding: 0px;
+}
+.footer {
+    width: 100%;
+    height:110px;
+    background-color: #AEC3AE;
+    position:relative;
+    text-align: left;
+    display: inline-block;
+}
+.footer-left{
+    float: left;
+    margin:10px 50px;
+    padding:0px;
+    color:#183D3D;
+}
+.footer-left img {
+    float: left;
+    width: 130px;
+    height: auto;
+    margin-bottom: 8px;
+}
+.konten-rekomendasi {
+    margin: 30px;
+    padding:0px;
+    text-align: justify;
+}
+.footer-center {
+    float: left;
+    margin:0px 30px;
+    padding:0px;
+    color:#183D3D;
+}
+.footer-center ul li {
+    font-weight: bold;
+    font-size: 13px;
+    padding-bottom: 10px;
+    list-style: none;
+}
+.footer-right {
+    float: left;
+    margin-left: 50px;
+    color:#183D3D;
+}
+.footer-right h3 {
+    font-size: 15px;
+    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+.footer-right p {
+    width: 400px;
+    text-align: justify;
+    font-size: 13px;
+    padding-top: 5px;
+}
+#beasiswa .konten1 {
+    width:600px;
+    height:300px;
+    float: right;
+    color: #183D3D;
+    margin:20px;
+}
+#beasiswa img {
+    width: 400px;
+    height: 300px;
+    margin: 30px 10px 30px 50px;
+    float: left;
+    border-radius: 20px;
+} 
+#beasiswa .konten2 {
+    clear: both;
+    margin: 10px 50px;
+    text-align: justify;
+}
+#Temukan-Beasiswa-Menarik-yang-Harus-Kamu-Coba h4 {
+    color: #183D3D;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background-color: #AEC3AE;
+    border-radius: 50px;
+}
+#Temukan-Beasiswa-Menarik-yang-Harus-Kamu-Coba .kolom {
+    display: inline-block;
+    margin:30px;
+    text-align: center;
+}
+#Temukan-Beasiswa-Menarik-yang-Harus-Kamu-Coba img {
+    width: 400px;
+    height: 300px;
+    margin: 30px 10px 30px 50px;
+    border-radius: 15px;
+    float: center;
+}
+#Temukan-Beasiswa-Menarik-yang-Harus-Kamu-Coba .Kolom {
+display: inline-block;
+text-align: center;
+overflow: hidden;
+border-radius: 20px;
+margin: 0px 30px;
+}
+#beasiswa h4 {
+    color: #183D3D;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background-color: #AEC3AE;
+    border-radius: 50px;
+}
+.beasiswa .kolom {
+    display: inline-block;
+    margin:30px;
+    text-align: center;
+}
+.beasiswa img {
+    width: 400px;
+    height: 300px;
+    margin: 30px 10px 30px 50px;
+    float: left;
+}
+.search-bar {
+    margin:20px auto;
+    font-weight: bold;
+    padding: 5px;
+}
+.contain-left img {
+    float : left;
+    width: 270px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 15px 30px;
+}
+.contain-right {
+    float:left;
+    text-align: justify;
+    margin: 15px;
+    width : 700px;
+    color: #183D3D;
+}
+/* Responsive Breakpoint */
+/*ukuran tablet*/
+/* @media screen and (max-width: 1100px) {
+    .menu .menu-toogle {
+        display : none;
+    }
+} */
+/*ukuran tablet*/
+/* @media screen and (max-width: 800px) {
+    .menu ul {
+        display : none;
+    }
+    #beranda img,
+    #beasiswa img {
+        width: 600px;
+        height: 500px;
+        margin: 30px 0px 0px 30px;
+    }
+    #beranda .konten1,
+    #beasiswa .konten1 {
+        display: block;
+        float: left;
+    }
+} */
+/*ukuran tablet*/
+/* @media screen and (max-width: 576px) {
+    .menu ul {
+        display : none;
+    }
+    #beranda img, 
+    #beasiswa img {
+        width: 450px;
+        height: 350px;
+        margin: 30px 0px 0px 30px;
+    }
+    #beranda .konten1,
+    #beasiswa .konten1,{
+        float: left;
+        display: block;
+    }
+} */
