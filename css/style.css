@@ -375,6 +375,7 @@ body {
 
 .tentangkami .row .profil-card img {
     width: 10rem;
+    border-radius: 50%;
 }
 
 .produkkami .row .menu-card .menu-card-title,
@@ -523,6 +524,10 @@ footer .credit a {
 @media (max-width : 1366px) {
     html { font-size:75%;
     }
+
+    .wrapper {
+        margin-top: 50%;
+    }
 }
 
 /*Tablet*/
@@ -604,10 +609,23 @@ footer .credit a {
     .produkkami .row .menu-card .menu-card-desk,
     .tentangkami .row .menu-card .menu-card-desk {
         font-size: 1.3rem;
+        margin-left :1.5rem;
     }
 
     .modal-content {
         flex-wrap: wrap;
+    }
+
+    .modal-content iframe {
+        width: 100%;
+    }
+
+    .modal-container {
+        height: 60%;
+    }
+
+    .wrapper {
+        margin-top: 50%;
     }
 
 }

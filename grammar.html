@@ -45,8 +45,8 @@
         <div class="row">
             <div class="menu-card">
                 <img src="img/grammar.png" class=produk-img alt="Speaking">
-                <h3 class="menu-card-title">Part of Speach</h3>
-                <p class="menu-card-desk">Dapatkan pembelajaran tentang Grammar mulai dari basic dengan materi yang mudah dipahami.</p>
+                <h3 id="title" class="menu-card-title">Part of Speach</h3>
+                <p id="desk" class="menu-card-desk">Dapatkan pembelajaran tentang Grammar mulai dari basic dengan materi yang mudah dipahami.</p>
                 <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
             </div>
             <div class="menu-card">
@@ -92,7 +92,7 @@
         <div class="modal-container">
             <a href="#" class="close-icon"><i data-feather="x"></i></a>
             <div class="modal-content">
-                <iframe width="420" height="315" src="https://www.youtube.com/embed/QOLz4XkePYA?si=zNM88moa2PwO50Rg"></iframe>
+                <iframe id="produkvidio" width="420" height="315" src="https://www.youtube.com/embed/QOLz4XkePYA?si=zNM88moa2PwO50Rg"></iframe>
                 <div class="produk-content">
                     <h3>Lesson 1</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium libero explicabo dolorem ipsum, provident laborum, vitae cum nemo quo quos qui dolorum molestiae voluptatibus. Iste.</p>
@@ -105,6 +105,20 @@
 
     <!--Feather Icons-->
     <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+        fetch(`/api/books/${urlParams.get("id")}`)
+            .then((rawResponse) => {
+            return rawResponse.json();
+            })
+            .then((response) => {
+            console.log({ response });
+            document.getElementById("title").innerText = response.data.title;
+            document.getElementById("desk").innerText =
+                response.data.releaseYear;
+            });
+
+
         feather.replace();
     </script>
     
