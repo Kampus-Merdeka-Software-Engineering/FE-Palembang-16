@@ -49,18 +49,6 @@
                 <p id="desk" class="menu-card-desk">Tingkatkan kemampuan Listening mulai dari basic dengan materi vidio yang mudah dipahami.</p>
                 <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
             </div>
-            <div class="menu-card">
-                <img src="img/listening.png" class=produk-img alt="grammar">
-                <h3 class="menu-card-title">High School Life</h3>
-                <p class="menu-card-desk">Tingkatkan kemampuan Listening mulai dari basic dengan materi vidio yang mudah dipahami.</p>
-                <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
-            </div>
-            <div class="menu-card">
-                <img src="img/listening.png" class=produk-img alt="listening">
-                <h3 class="menu-card-title">A New Job</h3>
-                <p class="menu-card-desk">Tingkatkan kemampuan Listening mulai dari basic dengan materi vidio yang mudah dipahami.</p>
-                <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
-            </div>
         </div>
     
     </section>
@@ -104,24 +92,40 @@
     <!-- Modal Box Item Detail End -->
 
     <!--Feather Icons-->
-    
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        fetch(`/api/books/${urlParams.get("id")}`)
-            .then((rawResponse) => {
-            return rawResponse.json();
-            })
-            .then((response) => {
-            console.log({ response });
-            document.getElementById("title").innerText = response.data.title;
-            document.getElementById("desk").innerText =
-                response.data.releaseYear;
-            });
-
-
+    <script>         
         feather.replace();
     </script>
     
+    <!-- Ambil Data Backend -->
+    <script>
+        const ambilData = async() => {
+            const response = await fetch("http://englishedu-palembang16-production.up.railway.app/listenings");
+            const Listening = await response.json();
+            console.log(Listening);
+
+
+            const h ="text/html"
+            let parser = new DOMParser();
+
+            Listening.forEach((listening) => {
+                let Listening = `
+                <div class="menu-card">
+                <img src="img/listening.png">
+                <h3 id="title" class="menu-card-title">${listening.listening_lesson}</h3>
+                <p id="desk" class="menu-card-desk">${listening.listening_description}</p>
+                <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
+                </div>
+
+            `;
+            let el = parser.parseFromString(Listening, h);
+                let root = document.querySelector("div.row");
+                root.appendChild(el.body.firstChild);
+        });
+    };
+
+        ambilData();
+    </script>
+
     <!--My JavaScript-->
     <script src="js/script.js"></script>
     </body>

@@ -52,7 +52,3 @@ window.onclick = (e) => {
         itemDetailModal.style.display = 'none';
     }
 }
-
-function go(loc) {
-    document.getElementById('produkvidio').src = loc;
-  }

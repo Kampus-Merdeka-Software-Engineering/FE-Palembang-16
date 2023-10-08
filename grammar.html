@@ -49,18 +49,6 @@
                 <p id="desk" class="menu-card-desk">Dapatkan pembelajaran tentang Grammar mulai dari basic dengan materi yang mudah dipahami.</p>
                 <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
             </div>
-            <div class="menu-card">
-                <img src="img/grammar.png" class=produk-img alt="grammar">
-                <h3 class="menu-card-title">Noun</h3>
-                <p class="menu-card-desk">Dapatkan pembelajaran tentang Grammar mulai dari basic dengan materi yang mudah dipahami.</p>
-                <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
-            </div>
-            <div class="menu-card">
-                <img src="img/grammar.png" class=produk-img alt="listening">
-                <h3 class="menu-card-title">Preposition</h3>
-                <p class="menu-card-desk">Dapatkan pembelajaran tentang Grammar mulai dari basic dengan materi yang mudah dipahami.</p>
-                <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
-            </div>
         </div>
     
     </section>
@@ -104,24 +92,50 @@
     <!-- Modal Box Item Detail End -->
 
     <!--Feather Icons-->
-    <script>
-
-        const urlParams = new URLSearchParams(window.location.search);
-        fetch(`/api/books/${urlParams.get("id")}`)
-            .then((rawResponse) => {
-            return rawResponse.json();
-            })
-            .then((response) => {
-            console.log({ response });
-            document.getElementById("title").innerText = response.data.title;
-            document.getElementById("desk").innerText =
-                response.data.releaseYear;
-            });
-
-
+    <script>        
         feather.replace();
     </script>
     
+    <!-- Ambil Data Backend -->
+    <script>
+        const ambilData = async() => {
+            const response = await fetch("http://englishedu-palembang16-production.up.railway.app/grammars");
+            const Grammar = await response.json();
+            console.log(Grammar);
+
+
+            const h ="text/html"
+            let parser = new DOMParser();
+
+            Grammar.forEach((grammar) => {
+                let Grammar = `
+                <div class="menu-card">
+                <img src="img/grammar.png">
+                <h3 id="title" class="menu-card-title">${grammar.grammar_lesson}</h3>
+                <p id="desk" class="menu-card-desk">${grammar.grammar_description}</p>
+                <a href="#" class="item-detail-button">Pelajari Lebih Lanjut</a>
+                </div>
+
+                
+                <div class="modal-content">
+                <iframe id="produkvidio">${grammar.link_grammar}</iframe>
+                <div class="produk-content">
+                    <h3>Lesson 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium libero explicabo dolorem ipsum, provident laborum, vitae cum nemo quo quos qui dolorum molestiae voluptatibus. Iste.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quam laborum nesciunt delectus iusto veniam ea quibusdam ipsa commodi. Explicabo accusantium dolores inventore culpa! Maiores?</p>
+                </div>
+                </div>
+
+            `;
+            let el = parser.parseFromString(Grammar, h);
+                let root = document.querySelector("div.row");
+                root.appendChild(el.body.firstChild);
+        });
+    };
+
+        ambilData();
+    </script>
+
     <!--My JavaScript-->
     <script src="js/script.js"></script>
     </body>
