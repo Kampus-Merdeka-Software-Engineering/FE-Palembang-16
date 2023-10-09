@@ -43,12 +43,12 @@ itemDetailButtons.forEach((btn) => {
 });
 
 // klik tombol close
-document.querySelector('.modal-container .close-icon').onclick = (e) => {
+document.querySelector('.modal .close-icon').onclick = (e) => {
     itemDetailModal.style.display = 'none';
 };
 
 window.onclick = (e) => {
     if (e.target === itemDetailModal) {
         itemDetailModal.style.display = 'none';
-    }
-}
+    };
+};

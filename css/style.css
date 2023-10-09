@@ -122,20 +122,6 @@ body {
     border-radius: 2rem;
 }
 
-/* .wrapper .icon-close {
-    position: absolute;
-    top:0;
-    right:0;
-    width:3rem;
-    height:3rem;
-    color: var(--font);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index:1;
-} */
-
 .wrapper .form-box h2{
     text-align: center;
     font-size: 1.8rem;
